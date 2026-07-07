@@ -4,13 +4,15 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API = import.meta.env.VITE_API_URL;
+
 const Home = () => {
 
     const [foods, setFoods] = useState([])
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/food/", {
+                const response = await axios.get(`${API}/api/food/`, {
                     withCredentials: true
                 })
                 setFoods(response.data.foodItems)

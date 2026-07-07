@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+const API = import.meta.env.VITE_API_URL;
 const FoodPartnerLogin = () => {
    const navigate = useNavigate()
     const [formData, setFormData] = useState({
@@ -12,7 +12,7 @@ const FoodPartnerLogin = () => {
     const handleSubmit =async (e) => {
       e.preventDefault()
       try {
-        const response = await axios.post("http://localhost:3000/api/auth/food-partner/login", formData, {
+        const response = await axios.post(`${API}/api/auth/food-partner/login`, formData, {
           withCredentials: true,
         })
       console.log(response.data)

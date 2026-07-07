@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+const API = import.meta.env.VITE_API_URL;
+
 const UserRegister = () => {
     const navigate=useNavigate()
     const handleSubmit=async (e)=>{
@@ -12,7 +14,7 @@ const UserRegister = () => {
 
     console.log(fullName, email, password);
     try {
-        const response=await axios.post("http://localhost:3000/api/auth/user/register",{
+        const response=await axios.post(`${API}/api/auth/user/register`,{
             fullName,
             email,
             password,
