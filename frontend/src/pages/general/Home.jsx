@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const response = await axios.get(`${API}/api/food/`, {
+                const response = await axios.get(`${API}api/food/`, {
                     withCredentials: true
                 })
                 setFoods(response.data.foodItems)

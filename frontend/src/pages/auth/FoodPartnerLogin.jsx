@@ -12,7 +12,7 @@ const FoodPartnerLogin = () => {
     const handleSubmit =async (e) => {
       e.preventDefault()
       try {
-        const response = await axios.post(`${API}/api/auth/food-partner/login`, formData, {
+        const response = await axios.post(`${API}api/auth/food-partner/login`, formData, {
           withCredentials: true,
         })
       console.log(response.data)

@@ -14,7 +14,7 @@ const UserRegister = () => {
 
     console.log(fullName, email, password);
     try {
-        const response=await axios.post(`${API}/api/auth/user/register`,{
+        const response=await axios.post(`${API}api/auth/user/register`,{
             fullName,
             email,
             password,
