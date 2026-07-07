@@ -8,7 +8,7 @@ const app= express()
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://reel-frontend-delta.vercel.app/",
     credentials: true,
   })
 );
